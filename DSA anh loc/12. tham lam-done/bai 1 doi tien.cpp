@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	long long n;
+	cin>>n;
+	int a[]={1, 2, 5, 10, 20, 50, 100, 200, 500, 1000};
+	sort(a, a+10, greater<int>());
+	int dem=0;
+	int i=0;
+	while(n!=0){
+		dem+=n/a[i];
+		n=n%a[i];
+		i++;
+	}
+	cout<<dem;
+}
